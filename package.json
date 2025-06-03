@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "keywords": [
     "electron",
@@ -20,7 +21,30 @@
   "description": "Interface locale pour compléter les coordonnées des villages (nourriture, bois, pierre) dans GoodGame Empire, organisée par royaume.",
   "dependencies": {
     "dotenv": "^16.5.0",
-    "electron": "^36.3.2",
     "simple-git": "^3.27.0"
+  },
+  "devDependencies": {
+    "electron": "^36.3.2",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.rundredoffi.ggevillagemanager",
+    "productName": "GGE Village Manager",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "index.html",
+      ".env"
+    ],
+    "extraMetadata": {
+      "main": "main.js"
+    },
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": "nsis"
+    }
   }
 }
