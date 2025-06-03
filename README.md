@@ -86,5 +86,3 @@ Voir [`CONTRIBUTING.md`](https://github.com/rundredoffi/villages-ressources-gge/
 ## 🪪 Licence
 
 MIT © [Rundredoffi](https://github.com/rundredoffi)
-
-```
