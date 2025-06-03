@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GGE Villages Manager</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Gestion des Villages GGE</h1>
+
+    <form id="village-form" class="card p-4 shadow-sm bg-white">
+      <div class="mb-3">
+        <label for="royaume" class="form-label">Royaume</label>
+        <select class="form-select" id="royaume" required>
+          <option value="royaume-vert">Royaume vert</option>
+          <option value="royaume-de-glace">Royaume de glace</option>
+          <option value="royaume-des-sables">Royaume des sables</option>
+          <option value="pic-du-dragon">Pic du dragon</option>
+
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="type" class="form-label">Type de village</label>
+        <select class="form-select" id="type" required>
+          <option value="nourriture">Nourriture</option>
+          <option value="bois">Bois</option>
+          <option value="pierre">Pierre</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="coordonnees" class="form-label">Coordonnées</label>
+        <input type="text" class="form-control" id="coordonnees" placeholder="ex : 123:456" required />
+      </div>
+
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="libre" />
+        <label class="form-check-label" for="libre">Village libre</label>
+      </div>
+
+      <div class="mb-3">
+        <label for="last_verification" class="form-label">Date de dernière vérification</label>
+        <input type="date" class="form-control" id="last_verification" required />
+      </div>
+
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-success">➕ Ajouter le village</button>
+      </div>
+
+      <div id="status" class="mt-3 text-center fw-bold text-success"></div>
+    </form>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
